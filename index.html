@@ -3,7 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+		<script src="plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({
+    plugins: [RevealNotes],
+  });
+</script>
 		<title>reveal.js</title>
          
 		<link rel="stylesheet" href="dist/reset.css">
@@ -18,7 +23,18 @@
 		<div class="reveal">
 			<div class="slides">
 
-	<section name="slide 0">
+	<section name="slide intro">
+		<section>
+			<aside class="notes">
+			  Bienvenidos a nuestra presentación.
+			  <br> 
+			  Vamos a hablar sobre la Torre Eiffel.
+			  <br>
+			  Yo soy Teo y hablo sobre la historia de la Torre Eiffel.
+			  <br>
+			  Y yo soy Laura y hablo sobre otros aspectos.
+			</aside>
+		  </section>
 		<h1 class="textstyle4">La Torre Eiffel</h1>
 		<section data-background-video="eiffel6.mp4" data-background-size="full" data-background-video-muted>
 		</section>
@@ -26,15 +42,9 @@
 	</section>
 
 				
-	<section name="slide 0.1">
+	<section name="slide 0/Laura">
 		<p class="textstyle4">Descripción del lugar</p>
-		<section data-background-video="eiffel4.mp4" data-background-size="full" data-background-video-muted>
-		</section>
-	</section>
-
-	<section name="slide 0.2">
-		<p class="textstyle4">Cambios y continuidades</p>
-		<section data-background-video="eiffel9.mp4" data-background-size="full" data-background-video-muted>
+		<section data-background-video="eiffel14.mp4" data-background-size="full" data-background-video-muted>
 		</section>
 	</section>
 
@@ -48,8 +58,8 @@
 
   			
   	<section name="slide 2">
-		<p> <span style="color:blue;">Autors</span> de la esta obra</p>
-		<section data-background-video="eiffel13.mp4" data-background-size="400" data-background-video-muted>
+		<p > <span style="color:blue;">Autors</span> de la esta obra</p>
+		<section data-background-video="eiffel12.mp4" data-background-size="400" data-background-video-muted>
 		<div  style="display: flex; justify-content: space-between; align-items: center;"> 
 		<div   class="fragment" >
 		<img
@@ -57,7 +67,7 @@
 				  width="400"
 				  height="400" 
 				/>
-				<p>Mayo de 1884, <span style="color:red;">fue diseñado</span> por Maurice Koechlin y Émile Nouguier.</p>
+				<p class="textstyle1">Mayo de 1884, <span style="color:red;">fue diseñado</span> por Maurice Koechlin y Émile Nouguier.</p>
 			</div>
 		<div   class="fragment" class="flex-container">
 		<img
@@ -65,7 +75,7 @@
 			width="300"
 			height="400" 
 		  />
-		<p>Gustave Eiffel, el jefe<span style="color:lightblue;">(boss)</span> de la empresa de construcción de puentes<span style="color:lightblue;">(bridges)</span> : <span style="color:red;">compró la idea y la publicitó<span style="color:lightblue;">(advertise)</span>.</span></p>
+		<p class="textstyle1">Gustave Eiffel, el jefe<span style="color:lightblue;">(boss)</span> de estos dos ingenieros: <span style="color:red;">compró la idea y la publicitó<span style="color:lightblue;">(advertise)</span>.</span></p>
 		</div>
 		</div>
 		</section>
@@ -73,15 +83,22 @@
 
 	<section name="slide 3">
 		<section data-background-video="eiffel3.mp4" data-background-size="contain">
-		<section data-markdown>
-		<textarea data-template>
-			Razón para su construcción
-- ✨la exposición de 1889 en París ✨
-<br></br>
-###### 100 aniversario de la revolución francesa
-- 1789 la toma de la Bastilla
-		</textarea>
-		</section>  
+		<div >
+			<p class="fragment textstyle1" data-fragment-index="1">
+				Razón para su construcción
+			</p>
+			<p class="fragment textstyle2" data-fragment-index="2">
+				✨la exposición de 1889 en París ✨ 
+			</p>
+			<p class="fragment textstyle3 " data-fragment-index="3">
+				100 aniversario de <span style="color:blue;">la revolución francesa</span>
+			</p>
+
+			<p class="fragment textstyle4" data-fragment-index="4">
+				- 1789 la toma de la Bastilla
+			</p>
+		</div>
+		
 		<img
 		 class="fragment"
 		src="Anonymous_-_Prise_de_la_Bastille.jpg"
@@ -94,49 +111,56 @@
 
 	<section name="slide 4" data-background-image="Exposition_Universelle_de_Paris_1889_-_Universitäts-_und_Landesbibliothek_Darmstadt.jpg" >
 			<div >
-				<p  class="fragment textstyle1" data-fragment-index="1" >1 de mayo de 1886: la torre Eiffel gana un concurso </p>
+				<p  class="fragment textstyle1" data-fragment-index="1" >mayo de 1886: la torre Eiffel gana el concurso<span style="color:lightblue;">(competition)</span>  </p>
 				<p class="fragment textstyle2" data-fragment-index="2">
-					convertirse en el principal símbolo <span class="fragment highlight-blue"data-fragment-index="2">(main symbol)</span> de la Feria,
+					se convirtió<span class="fragment highlight-blue"data-fragment-index="2">(it became)</span> en el principal símbolo <span class="fragment highlight-blue"data-fragment-index="2">(main symbol)</span> de la Feria,
 				</p >
 				<p class="fragment textstyle3" data-fragment-index="3">sirvió como arco de entrada <span class="fragment highlight-blue"data-fragment-index="3">(entrance arch)</span> a la Feria. </p>
-			</div>
-			<div class="r-stack">
+				<div class="r-stack" >
 				<img
+				class="fragment current-visible"
+				data-fragment-index="2"
+				src="ballon-exposition.jpeg"
+				width="450"
+				height="300"
+				p="Balloon Exposition"
+				
+			  />
+			  <img
+			  class="fragment current-visible"
+			  data-fragment-index="3"
+			  src="exposition-from-trocadero.jpeg"
+			  width="300"
+			  height="450"
+			  style="display: block; margin: auto;" 
+			/>
+			<img
 				  class="fragment current-visible"
-				  src="ballon-exposition.jpeg"
-				  width="450"
-				  height="300"
-				  p="Balloon Exposition"
-				/>
-				<img
-				  class="fragment current-visible"
+				  data-fragment-index="4"
 				  src="pavillions.jpeg"
 				  width="300"
 				  height="450"
 				/>
-				<img
-				  class="fragment current-visible"
-				  src="exposition-from-trocadero.jpeg"
-				  width="400"
-				  height="400"
-				/>
-				<div>
-				<p class="fragment textstyle2" > El 8 de enero de 1887, Eiffel y su proyecto recibieron un financiamiento de 1.5 millones francs por el gobierno,
-				</p>
-				<p class="fragment textstyle1"> pero el costo estimado fue de 6.5 millones.</p>	
-				</div>
-			  </div>	
+			</div>
+		</div>
+			 
   </section>
   <section name="slide 5" data-background-video="eiffel10.mp4" data-background-size="contain" data-background-opacity="0.5" >
 
 
 		<div class="r-stack">
-			<p class="fragment current-visible">construcción</p>
-		
+
+			<p class="fragment current-visible">la construcción</p>
+			<div>
+				<p class="fragment current-visible textstyle2"  data-fragment-index="5"> enero de 1887, se recibió 1.5 millones francos por el gobierno,
+				</p>
+				<p class="fragment current-visible textstyle1" data-fragment-index="6"> pero el costo estimado fue de 6.5 millones.</p>	
+				</div>
+
 			<div class="fragment current-visible">
 				<div class="container">
 					<img  src="constructions-img/1.jpeg" width="500" height="450" p="Balloon Exposition" />
-					<p >18 de julio de 1887: Inicio de la construcción de la carpintería metálica.
+					<p >julio de 1887: se inició la construcción de la carpintería metálica<span class="fragment highlight-blue"data-fragment-index="2">(metal carpentry/metalwork)</span>.
 					</p>
 				</div>
 			</div>
@@ -144,35 +168,35 @@
 			<div class="fragment current-visible">
 				<div class="container">
 					<img  src="constructions-img/2.jpeg" width="500" height="450" p="Balloon Exposition" />
-					<p >7 de diciembre de 1887: Construcción de las patas </p>
+					<p >diciembre de 1887: Se construyeron las patas(legs).</p>
 				</div>
 			</div>
 		
 			<div class="fragment current-visible">
 				<div class="container">
 					<img  src="constructions-img/3.jpeg" width="500" height="450" p="Balloon Exposition" />
-					<p >20 de marzo de 1888: finalización del primera etapa.</p>
+					<p >marzo de 1888: Se finalizó la primera etapa(stage).</p>
 				</div>
 			</div>
 		
 			<div class="fragment current-visible">
 				<div class="container">
 					<img  src="constructions-img/4.jpeg" width="500" height="450" p="Balloon Exposition" />
-					<p >15 de mayo de 1888: Inicio de la construcción de la segunda etapa.</p>
+					<p >mayo de 1888: se inició la construcción de la segunda etapa.</p>
 				</div>
 			</div>
 		
 			<div class="fragment current-visible">
 				<div class="container">
 					<img src="constructions-img/5.jpeg" width="500" height="450" p="Balloon Exposition" />
-					<p >21 de agosto 1888: finalización del segunda etapa.</p>
+					<p >agosto 1888: Se finalizó la segunda etapa. </p>
 				</div>
 			</div>
 		
 			<div class="fragment current-visible">
 				<div class="container">
 					<img  src="constructions-img/6.jpeg" width="500" height="450" p="Balloon Exposition" />
-					<p >26 de diciembre de 1888: Construcción del escenario superior.
+					<p >26 de diciembre de 1888: Se construyó la etapa superiora(upper stage).
 					</p>
 				</div>
 			</div>
@@ -180,26 +204,35 @@
 			<div class="fragment current-visible">
 				<div class="container">
 					<img  src="constructions-img/7.jpeg" width="500" height="450" p="Balloon Exposition" />
-					<p >15 de marzo de 1889: Construcción de la cúpula.</p>
+					<p >15 de marzo de 1889: Construcción de la cúpula(dome/cupola).</p>
 				</div>
 			</div>
-		</div>
-		<div>
-			<p class="fragment" >26 de enero de 1887--31 de marzo de 1889</p>
-			<p class="fragment" >2 años, 2 meses y 5 días</p>
-			<p class="fragment"> La inauguración fue el 15 de mayo de 1889</p>
+			<div class="fragment current-visible">
+				<div class="container">
+				<p  style=" text-align: center;" >enero de 1887--marzo de 1889</p>
+				<p  >2 años, 2 meses y 5 días</p>
+				<p > La inauguración fue en mayo de 1889</p>
+			</div>
+	
 		</div>
 </section>
+
 <section name="slide 6">
 	<p>patrimonio mundial</p>
 	<section data-background-video="eiffel6.mp4" data-background-size="contain">
-	<p>cuanto estuvo inscrita en parte del patrimonio mundial UNESCO en 1991
+	<p>Cuando estuvo inscrita en parte del patrimonio mundial de la UNESCO en 1991
 		<br></br>
 		ya había sido declarada monumento protegido en 1964</p>
 	</section>
 </section>
 
-<section name="slide 7" data-background-video="me1.MOV" data-background-size="contain" data-background-video-muted="true">
+<section name="slide 7/Laura">
+	<p class="textstyle4">Cambios y continuidades</p>
+	<section data-background-video="eiffel7.mp4" data-background-size="full" data-background-video-muted>
+	</section>
+</section>
+
+<section name="slide 8" data-background-video="me1.MOV" data-background-size="contain" data-background-video-muted="true">
 	<p>30.05.2023</p>
 	<div class="r-stack">
 		<img class="fragment current-visible"
